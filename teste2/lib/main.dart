@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teste2/numberLucky.dart';
+import 'package:teste2/numberlucky.dart';
 import 'package:teste2/redeemReward.dart';
 
 void main() {

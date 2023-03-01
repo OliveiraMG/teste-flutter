@@ -124,21 +124,15 @@ class RedeemReward extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            FittedBox(
-                              child: Flexible(
-                                child: const Text(
-                                  '123143314314511234567891234567894567',
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(57, 57, 57, 1),
-                                      fontSize: 16),
-                                ),
-                              ),
-                            ),
-                          ],
+                      Expanded(
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: const Text(
+                            '123143314314511234567891234567894567',
+                            style: TextStyle(
+                                color: Color.fromRGBO(57, 57, 57, 1),
+                                fontSize: 16),
+                          ),
                         ),
                       ),
                       Transform(
