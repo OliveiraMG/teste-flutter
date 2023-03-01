@@ -10,8 +10,9 @@ class LayoutCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-          side: BorderSide(color: Color.fromRGBO(176, 233, 236, 1), width: 3),
-          borderRadius: BorderRadius.circular(8.0)),
+        side: BorderSide(color: Color.fromRGBO(176, 233, 236, 1), width: 3),
+        borderRadius: BorderRadius.circular(8.0),
+      ),
       elevation: 0,
       color: Color.fromRGBO(237, 250, 251, 1),
       child: Center(

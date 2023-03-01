@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teste2/numberLucky.dart';
+import 'package:teste2/redeemReward.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NumberLucky(title: 'Notificações'),
+      home: NumberLucky(title: 'Notificações'),
     );
   }
 }

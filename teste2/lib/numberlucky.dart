@@ -5,22 +5,19 @@
 import 'package:flutter/material.dart';
 import 'package:teste2/layoutcard.dart';
 
-class NumberLucky extends StatefulWidget {
+class NumberLucky extends StatelessWidget {
   final String title;
-  const NumberLucky({super.key, required this.title});
+  NumberLucky({super.key, required this.title});
 
-  @override
-  State<NumberLucky> createState() => _NumberLuckyState();
-}
+  final List<String> cards = ['3245684', '3245683', '3245682'];
+  int _numNotification = 1;
 
-class _NumberLuckyState extends State<NumberLucky> {
-  List<String> cards = ['3245684', '3245683', '3245682'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromRGBO(255, 169, 156, 1),
         centerTitle: true,
         actions: const [
           Padding(
@@ -31,12 +28,46 @@ class _NumberLuckyState extends State<NumberLucky> {
             ),
           )
         ],
-        leading: const Icon(
-          Icons.arrow_back_ios,
-          color: Color.fromRGBO(232, 69, 46, 1),
+        leading: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            Icon(
+              Icons.radio_button_unchecked_outlined,
+              color: Colors.white,
+              size: 28,
+            ),
+            const Icon(
+              Icons.notifications_none_outlined,
+              color: Colors.white,
+              size: 16,
+            ),
+            Positioned(
+              top: 8,
+              right: 8,
+              child: Container(
+                padding: EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(232, 69, 46, 1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                constraints: BoxConstraints(
+                  minWidth: 18,
+                  minHeight: 18,
+                ),
+                child: Text(
+                  _numNotification.toString(),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            )
+          ],
         ),
         title: Text(
-          widget.title,
+          title,
           style: const TextStyle(color: Colors.black),
         ),
       ),
@@ -82,8 +113,11 @@ class _NumberLuckyState extends State<NumberLucky> {
                 width: 312,
                 height: 53,
                 decoration: BoxDecoration(
-                    color: Color.fromRGBO(246, 81, 54, 1),
-                    borderRadius: BorderRadius.all(Radius.circular(4))),
+                  color: Color.fromRGBO(246, 81, 54, 1),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
+                ),
                 child: TextButton(
                   onPressed: () {
                     showDialog(
