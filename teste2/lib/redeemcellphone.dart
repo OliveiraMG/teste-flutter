@@ -24,7 +24,7 @@ class _RedeemCellPhoneState extends State<RedeemCellPhone> {
     addCards();
   }
 
-  final double saldoUser = 37.0;
+  final double saldoUser = 48.0;
 
   void addCards() {
     for (double i = 10.0; i <= saldoUser; i = i + 5.0) {
