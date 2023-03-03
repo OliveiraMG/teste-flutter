@@ -3,8 +3,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 
-class RechargeSucess extends StatelessWidget {
-  const RechargeSucess({super.key, required this.title});
+class RechargeSuccess extends StatelessWidget {
+  const RechargeSuccess({super.key, required this.title});
 
   final String title;
 

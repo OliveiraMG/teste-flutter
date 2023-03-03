@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teste2/numberlucky.dart';
 import 'package:teste2/passwordRecharge.dart';
-import 'package:teste2/rechargeSucess.dart';
+import 'package:teste2/rechargeSuccess.dart';
 import 'package:teste2/redeemReward.dart';
 import 'package:teste2/redeemcellphone.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RechargeSucess(title: 'Resgatar'),
+      home: RechargeSuccess(title: 'Resgatar'),
     );
   }
 }
