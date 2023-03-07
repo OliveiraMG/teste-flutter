@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class RechargeSuccess extends StatelessWidget {
   const RechargeSuccess({super.key, required this.title});
@@ -101,51 +102,87 @@ class RechargeSuccess extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            Center(
-              child: Container(
-                width: 312,
-                height: 53,
-                decoration: BoxDecoration(
-                  color: Color.fromRGBO(246, 81, 54, 1),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(4),
-                  ),
+            Container(
+              width: 312,
+              height: 53,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(246, 81, 54, 1),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(4),
                 ),
-                child: TextButton(
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: Center(
-                            child: Text(
-                              "Entrou no extrato!",
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.green),
+              ),
+              child: TextButton(
+                onPressed: () {
+                  Get.bottomSheet(
+                    Container(
+                      padding: EdgeInsets.all(24),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16),
+                          topRight: Radius.circular(16),
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Sua conta está em análise.',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromRGBO(57, 57, 57, 1),
                             ),
                           ),
-                          content: Text(
-                            "VOCÊ ACESSOU O SEU EXTRATO COM SUCESSO!",
-                            style: TextStyle(fontSize: 16, color: Colors.green),
-                          ),
-                          actions: [
-                            TextButton(
-                              child: Text("OK"),
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
+                          SizedBox(height: 16),
+                          RichText(
+                            text: const TextSpan(
+                              text:
+                                  'Para mais informações consulte seu e-mail ou entre em contato com ',
+                              style: TextStyle(
+                                color: Color.fromRGBO(57, 57, 57, 1),
+                                fontSize: 16,
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: 'nossa equipe de atendimento.',
+                                  style: TextStyle(
+                                    color: Color.fromRGBO(21, 156, 164, 1),
+                                    fontSize: 16,
+                                    decoration: TextDecoration.underline,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                  child: Center(
-                    child: Text(
-                      'Ir para o extrato',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                          ),
+                          SizedBox(height: 24),
+                          Container(
+                            width: 312,
+                            height: 53,
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(246, 81, 54, 1),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(4),
+                              ),
+                            ),
+                            child: TextButton(
+                              onPressed: () => Get.back(),
+                              child: Text(
+                                'Entrar em contato',
+                                style: TextStyle(
+                                    fontSize: 16, color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
+                  );
+                },
+                child: Text(
+                  'Abrir BottomSheet',
+                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ),
             ),
