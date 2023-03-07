@@ -125,14 +125,16 @@ class RechargeSuccess extends StatelessWidget {
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Sua conta está em análise.',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: Color.fromRGBO(57, 57, 57, 1),
+                          Container(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              'Sua conta está em análise.',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Color.fromRGBO(57, 57, 57, 1),
+                              ),
                             ),
                           ),
                           SizedBox(height: 16),
