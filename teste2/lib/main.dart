@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:teste2/numberlucky.dart';
-import 'package:teste2/passwordRecharge.dart';
-import 'package:teste2/rechargeSuccess.dart';
-import 'package:teste2/redeemReward.dart';
-import 'package:teste2/redeemcellphone.dart';
+import 'package:teste2/NumberLucky/layoutcard.dart';
+import 'package:teste2/NumberLucky/numberlucky.dart';
+import 'package:teste2/RedeemCellPhone/passwordRecharge.dart';
+import 'package:teste2/RedeemCellPhone/rechargeSuccess.dart';
+import 'package:teste2/redeemiFoodSucess/redeemReward.dart';
+import 'package:teste2/RedeemCellPhone/redeemcellphone.dart';
 import 'package:get/get.dart';
+import 'package:teste2/RedeemOptions/redeemoptions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RechargeSuccess(title: 'Resgatar'),
+      home: RedeemOptions(title: 'Resgatar'),
     );
   }
 }

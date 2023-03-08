@@ -17,7 +17,6 @@ class LayoutCard extends StatelessWidget {
       color: Color.fromRGBO(237, 250, 251, 1),
       child: Center(
         child: Container(
-          width: 312,
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [

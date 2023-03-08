@@ -3,7 +3,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:teste2/layoutcard.dart';
+import 'package:teste2/NumberLucky/layoutcard.dart';
 
 class NumberLucky extends StatelessWidget {
   final String title;

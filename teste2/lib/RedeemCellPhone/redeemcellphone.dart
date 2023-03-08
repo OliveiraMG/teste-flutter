@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:teste2/cardcellphone.dart';
+import 'package:teste2/RedeemCellPhone/cardcellphone.dart';
 
 class RedeemCellPhone extends StatefulWidget {
   RedeemCellPhone({super.key, required this.title});
