@@ -1,12 +1,17 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:teste2/RedeemOptions/cardoptions.dart';
 import 'package:teste2/RedeemOptions/redeemtypeinfo.dart';
+import 'package:get/get.dart';
 
 class RedeemOptions extends StatelessWidget {
   RedeemOptions({super.key, required this.title});
+
+  final double userBalance = 15;
 
   final List<RedeemTypeInfo> cards = [
     RedeemTypeInfo(
@@ -78,11 +83,95 @@ class RedeemOptions extends StatelessWidget {
                 (index) => Container(
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: 16),
-                    child: CardOptions(
-                      text: cards[index].text,
-                      img: cards[index].img,
-                      minimumValue: cards[index].minimumValue,
-                      userBalance: 10,
+                    child: GestureDetector(
+                      onTap: () {
+                        if (cards[index].minimumValue <= userBalance) {
+                          Get.bottomSheet(
+                            Container(
+                              padding: EdgeInsets.all(24),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(16),
+                                  topRight: Radius.circular(16),
+                                ),
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      'Hora de resgatar!.',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                        color: Color.fromRGBO(57, 57, 57, 1),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 16),
+                                  RichText(
+                                    text: const TextSpan(
+                                      text:
+                                          'Por motivos de segurança, iremos direcionar você para ',
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(57, 57, 57, 1),
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w400),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: 'entrar em sua conta.',
+                                          style: TextStyle(
+                                              color:
+                                                  Color.fromRGBO(57, 57, 57, 1),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  RichText(
+                                    text: const TextSpan(
+                                      text:
+                                          'Precisamos de um login recente para confirmarmos que é você mesmo realizando o resgate.',
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(57, 57, 57, 1),
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ),
+                                  SizedBox(height: 32),
+                                  Container(
+                                    width: 312,
+                                    height: 53,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(246, 81, 54, 1),
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(4),
+                                      ),
+                                    ),
+                                    child: TextButton(
+                                      onPressed: () => Get.back(),
+                                      child: Text(
+                                        'Legal, vamos lá!',
+                                        style: TextStyle(
+                                            fontSize: 16, color: Colors.white),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        }
+                      },
+                      child: CardOptions(
+                        text: cards[index].text,
+                        img: cards[index].img,
+                        minimumValue: cards[index].minimumValue,
+                        userBalance: 15,
+                      ),
                     ),
                   ),
                 ),

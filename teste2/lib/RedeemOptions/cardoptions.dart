@@ -15,10 +15,6 @@ class CardOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color cardColor = userBalance >= minimumValue
-        ? Color.fromRGBO(36, 136, 36, 1)
-        : Color.fromRGBO(232, 69, 46, 1);
-
     return Card(
       shape: RoundedRectangleBorder(
         side: BorderSide(
@@ -56,7 +52,9 @@ class CardOptions extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0),
             ),
             elevation: 0,
-            color: cardColor,
+            color: userBalance >= minimumValue
+                ? Color.fromRGBO(36, 136, 36, 1)
+                : Color.fromRGBO(232, 69, 46, 1),
             child: Container(
               padding: EdgeInsets.only(right: 8, left: 8, bottom: 4, top: 4),
               child: Text(
