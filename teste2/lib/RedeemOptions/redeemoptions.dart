@@ -102,7 +102,7 @@ class RedeemOptions extends StatelessWidget {
                                   Container(
                                     alignment: Alignment.topLeft,
                                     child: Text(
-                                      'Hora de resgatar!.',
+                                      'Hora de resgatar!',
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.w500,
@@ -121,7 +121,8 @@ class RedeemOptions extends StatelessWidget {
                                           fontWeight: FontWeight.w400),
                                       children: <TextSpan>[
                                         TextSpan(
-                                          text: 'entrar em sua conta.',
+                                          text:
+                                              'entrar em sua conta. Assim que entrar, você conseguirá realizar o resgate ;)',
                                           style: TextStyle(
                                               color:
                                                   Color.fromRGBO(57, 57, 57, 1),
@@ -129,16 +130,6 @@ class RedeemOptions extends StatelessWidget {
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ],
-                                    ),
-                                  ),
-                                  RichText(
-                                    text: const TextSpan(
-                                      text:
-                                          'Precisamos de um login recente para confirmarmos que é você mesmo realizando o resgate.',
-                                      style: TextStyle(
-                                          color: Color.fromRGBO(57, 57, 57, 1),
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w400),
                                     ),
                                   ),
                                   SizedBox(height: 32),
