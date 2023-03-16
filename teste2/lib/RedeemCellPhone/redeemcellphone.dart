@@ -67,15 +67,15 @@ class _RedeemCellPhoneState extends State<RedeemCellPhone> {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            Text(
+            const Text(
               'Qual o valor da sua recarga de celular?',
               style: TextStyle(
                 color: Color.fromRGBO(57, 57, 57, 1),
@@ -83,24 +83,24 @@ class _RedeemCellPhoneState extends State<RedeemCellPhone> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Card(
               margin: EdgeInsets.zero,
               shape: RoundedRectangleBorder(
-                side: BorderSide(
+                side: const BorderSide(
                     color: Color.fromRGBO(255, 246, 244, 1), width: 5),
                 borderRadius: BorderRadius.circular(4.0),
               ),
               elevation: 0,
-              color: Color.fromRGBO(255, 246, 244, 1),
+              color: const Color.fromRGBO(255, 246, 244, 1),
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 child: RichText(
                   text: TextSpan(
                     text: 'Saldo disponível: ',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Color.fromRGBO(57, 57, 57, 1),
                       fontSize: 16,
                     ),
@@ -108,7 +108,7 @@ class _RedeemCellPhoneState extends State<RedeemCellPhone> {
                       TextSpan(
                         text:
                             'R\$ ${saldoUser.toStringAsFixed(2).replaceAll('.', ',')}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color.fromRGBO(57, 57, 57, 1),
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -119,7 +119,7 @@ class _RedeemCellPhoneState extends State<RedeemCellPhone> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             Center(
@@ -129,7 +129,7 @@ class _RedeemCellPhoneState extends State<RedeemCellPhone> {
                 children: List.generate(
                   cardsCell.length,
                   (index) => Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       bottom: 16,
                     ),
                     child: CardCellPhone(

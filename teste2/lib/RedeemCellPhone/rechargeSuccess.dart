@@ -48,14 +48,14 @@ class RechargeSuccess extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            Text(
+            const Text(
               'Recarga enviada com sucesso!',
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 18,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             RichText(
@@ -77,7 +77,7 @@ class RechargeSuccess extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             RichText(
@@ -99,13 +99,13 @@ class RechargeSuccess extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
               width: 312,
               height: 53,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color.fromRGBO(246, 81, 54, 1),
                 borderRadius: BorderRadius.all(
                   Radius.circular(4),
@@ -115,8 +115,8 @@ class RechargeSuccess extends StatelessWidget {
                 onPressed: () {
                   Get.bottomSheet(
                     Container(
-                      padding: EdgeInsets.all(24),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(24),
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(16),
@@ -128,7 +128,7 @@ class RechargeSuccess extends StatelessWidget {
                         children: [
                           Container(
                             alignment: Alignment.topLeft,
-                            child: Text(
+                            child: const Text(
                               'Sua conta está em análise.',
                               style: TextStyle(
                                 fontSize: 20,
@@ -137,7 +137,7 @@ class RechargeSuccess extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 16),
+                          const SizedBox(height: 16),
                           RichText(
                             text: const TextSpan(
                               text:
@@ -158,11 +158,11 @@ class RechargeSuccess extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(height: 24),
+                          const SizedBox(height: 24),
                           Container(
                             width: 312,
                             height: 53,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color.fromRGBO(246, 81, 54, 1),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(4),
@@ -170,7 +170,7 @@ class RechargeSuccess extends StatelessWidget {
                             ),
                             child: TextButton(
                               onPressed: () => Get.back(),
-                              child: Text(
+                              child: const Text(
                                 'Entrar em contato',
                                 style: TextStyle(
                                     fontSize: 16, color: Colors.white),
@@ -182,7 +182,7 @@ class RechargeSuccess extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text(
+                child: const Text(
                   'Abrir BottomSheet',
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),

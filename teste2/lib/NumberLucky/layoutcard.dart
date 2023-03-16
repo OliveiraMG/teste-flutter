@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class LayoutCard extends StatelessWidget {
   final String numeroSorte;
@@ -10,11 +8,11 @@ class LayoutCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: Color.fromRGBO(176, 233, 236, 1), width: 3),
+        side: const BorderSide(color: Color.fromRGBO(176, 233, 236, 1), width: 3),
         borderRadius: BorderRadius.circular(8.0),
       ),
       elevation: 0,
-      color: Color.fromRGBO(237, 250, 251, 1),
+      color: const Color.fromRGBO(237, 250, 251, 1),
       child: Center(
         child: Container(
           padding: const EdgeInsets.all(20.0),
@@ -22,7 +20,7 @@ class LayoutCard extends StatelessWidget {
             children: [
               Text(
                 numeroSorte,
-                style: TextStyle(
+                style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                     fontSize: 30),

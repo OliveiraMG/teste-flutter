@@ -17,34 +17,34 @@ class CardOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        side: BorderSide(
+        side: const BorderSide(
           color: Color.fromRGBO(220, 220, 220, 1),
           width: 1,
         ),
         borderRadius: BorderRadius.circular(8.0),
       ),
       elevation: 0,
-      color: Color.fromRGBO(251, 251, 251, 1),
+      color: const Color.fromRGBO(251, 251, 251, 1),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
-          Image.asset('$img'),
-          SizedBox(
+          Image.asset(img),
+          const SizedBox(
             height: 24,
           ),
           Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
               color: Color.fromRGBO(82, 82, 82, 1),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Card(
@@ -53,13 +53,13 @@ class CardOptions extends StatelessWidget {
             ),
             elevation: 0,
             color: userBalance >= minimumValue
-                ? Color.fromRGBO(36, 136, 36, 1)
-                : Color.fromRGBO(232, 69, 46, 1),
+                ? const Color.fromRGBO(36, 136, 36, 1)
+                : const Color.fromRGBO(232, 69, 46, 1),
             child: Container(
-              padding: EdgeInsets.only(right: 8, left: 8, bottom: 4, top: 4),
+              padding: const EdgeInsets.only(right: 8, left: 8, bottom: 4, top: 4),
               child: Text(
                 'Mínimo: R\$ ' + minimumValue.toString() + ",00",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14,
                   color: Colors.white,
                   fontWeight: FontWeight.w500,

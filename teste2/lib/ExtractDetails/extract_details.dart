@@ -36,8 +36,8 @@ class ExtractDetails extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(
+          children: const [
+            SizedBox(
               height: 24,
             ),
             Text(

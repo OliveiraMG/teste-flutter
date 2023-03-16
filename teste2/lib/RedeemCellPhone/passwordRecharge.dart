@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class PasswordRecharge extends StatelessWidget {
   const PasswordRecharge({super.key, required this.title});
@@ -48,12 +46,12 @@ class PasswordRecharge extends StatelessWidget {
                 color: Color.fromRGBO(57, 57, 57, 1),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
             Card(
               shape: RoundedRectangleBorder(
-                side: BorderSide(
+                side: const BorderSide(
                     color: Color.fromRGBO(97, 97, 97, 1), width: 1.5),
                 borderRadius: BorderRadius.circular(4.0),
               ),
@@ -63,7 +61,7 @@ class PasswordRecharge extends StatelessWidget {
                 width: 312,
                 height: 56,
                 padding: const EdgeInsets.all(20.0),
-                child: Text(
+                child: const Text(
                   'Senha*',
                   style: TextStyle(
                       fontWeight: FontWeight.w400,
@@ -72,13 +70,13 @@ class PasswordRecharge extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                child: Text(
+                child: const Text(
                   'Esqueci minha senha',
                   style: TextStyle(
                     color: Color.fromRGBO(21, 156, 164, 1),
@@ -89,14 +87,14 @@ class PasswordRecharge extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Center(
               child: Container(
                 width: 312,
                 height: 53,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color.fromRGBO(246, 81, 54, 1),
                   borderRadius: BorderRadius.all(
                     Radius.circular(4),
@@ -108,20 +106,20 @@ class PasswordRecharge extends StatelessWidget {
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title: Center(
+                          title: const Center(
                             child: Text(
                               "Senha correta!",
                               style:
                                   TextStyle(fontSize: 20, color: Colors.green),
                             ),
                           ),
-                          content: Text(
+                          content: const Text(
                             "Você realizou a recarga com sucesso!",
                             style: TextStyle(fontSize: 16, color: Colors.green),
                           ),
                           actions: [
                             TextButton(
-                              child: Text("OK"),
+                              child: const Text("OK"),
                               onPressed: () {
                                 Navigator.pop(context);
                               },
@@ -131,7 +129,7 @@ class PasswordRecharge extends StatelessWidget {
                       },
                     );
                   },
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Enviar',
                       style: TextStyle(color: Colors.white, fontSize: 18),

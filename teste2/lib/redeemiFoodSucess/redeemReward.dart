@@ -124,10 +124,10 @@ class RedeemReward extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Expanded(
+                      const Expanded(
                         child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
-                          child: const Text(
+                          child: Text(
                             '123143314314511234567891234567894567',
                             style: TextStyle(
                                 color: Color.fromRGBO(57, 57, 57, 1),
@@ -250,13 +250,13 @@ class RedeemReward extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             Container(
               width: 312,
               height: 53,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color.fromRGBO(246, 81, 54, 1),
                 borderRadius: BorderRadius.all(
                   Radius.circular(4),
@@ -268,19 +268,19 @@ class RedeemReward extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Center(
+                        title: const Center(
                           child: Text(
                             "RECOMPENSA RESGATADA!",
                             style: TextStyle(fontSize: 20, color: Colors.green),
                           ),
                         ),
-                        content: Text(
+                        content: const Text(
                           "Recompensas resgatadas com sucesso!",
                           style: TextStyle(fontSize: 16, color: Colors.green),
                         ),
                         actions: [
                           TextButton(
-                            child: Text("OK"),
+                            child: const Text("OK"),
                             onPressed: () {
                               Navigator.pop(context);
                             },
@@ -290,7 +290,7 @@ class RedeemReward extends StatelessWidget {
                     },
                   );
                 },
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Entendi',
                     style: TextStyle(color: Colors.white, fontSize: 18),
@@ -298,7 +298,7 @@ class RedeemReward extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 49,
             ),
           ],

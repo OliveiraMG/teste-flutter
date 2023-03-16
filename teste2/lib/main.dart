@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:teste2/ExtractDetails/extract_details.dart';
 import 'package:teste2/NumberLucky/layoutcard.dart';
 import 'package:teste2/NumberLucky/numberlucky.dart';
+import 'package:teste2/RateApp/Rate_App.dart';
 import 'package:teste2/RedeemCellPhone/passwordRecharge.dart';
 import 'package:teste2/RedeemCellPhone/rechargeSuccess.dart';
 import 'package:teste2/redeemiFoodSucess/redeemReward.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RedeemOptions(title: 'Resgatar'),
+      home: RateApp(title: 'Avalie o Mangos'),
     );
   }
 }

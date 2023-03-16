@@ -1,9 +1,6 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:teste2/RedeemOptions/cardoptions.dart';
 import 'package:teste2/RedeemOptions/redeemtypeinfo.dart';
 import 'package:get/get.dart';
@@ -11,7 +8,7 @@ import 'package:get/get.dart';
 class RedeemOptions extends StatelessWidget {
   RedeemOptions({super.key, required this.title});
 
-  final double userBalance = 15;
+  final double userBalance = 10;
 
   final List<RedeemTypeInfo> cards = [
     RedeemTypeInfo(
@@ -64,14 +61,14 @@ class RedeemOptions extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Text(
+            const Text(
               'Como você deseja resgatar seus pontos?',
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
                   color: Color.fromRGBO(57, 57, 57, 1)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
             GridView.count(
@@ -88,8 +85,8 @@ class RedeemOptions extends StatelessWidget {
                         if (cards[index].minimumValue <= userBalance) {
                           Get.bottomSheet(
                             Container(
-                              padding: EdgeInsets.all(24),
-                              decoration: BoxDecoration(
+                              padding: const EdgeInsets.all(24),
+                              decoration: const BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(16),
@@ -101,7 +98,7 @@ class RedeemOptions extends StatelessWidget {
                                 children: [
                                   Container(
                                     alignment: Alignment.topLeft,
-                                    child: Text(
+                                    child: const Text(
                                       'Hora de resgatar!',
                                       style: TextStyle(
                                         fontSize: 20,
@@ -110,7 +107,7 @@ class RedeemOptions extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(height: 16),
+                                  const SizedBox(height: 16),
                                   RichText(
                                     text: const TextSpan(
                                       text:
@@ -132,11 +129,11 @@ class RedeemOptions extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 32),
+                                  const SizedBox(height: 32),
                                   Container(
                                     width: 312,
                                     height: 53,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color.fromRGBO(246, 81, 54, 1),
                                       borderRadius: BorderRadius.all(
                                         Radius.circular(4),
@@ -144,7 +141,7 @@ class RedeemOptions extends StatelessWidget {
                                     ),
                                     child: TextButton(
                                       onPressed: () => Get.back(),
-                                      child: Text(
+                                      child: const Text(
                                         'Legal, vamos lá!',
                                         style: TextStyle(
                                             fontSize: 16, color: Colors.white),
@@ -161,7 +158,7 @@ class RedeemOptions extends StatelessWidget {
                         text: cards[index].text,
                         img: cards[index].img,
                         minimumValue: cards[index].minimumValue,
-                        userBalance: 15,
+                        userBalance: 10,
                       ),
                     ),
                   ),
