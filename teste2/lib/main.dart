@@ -5,6 +5,7 @@ import 'package:teste2/NumberLucky/numberlucky.dart';
 import 'package:teste2/RateApp/Rate_App.dart';
 import 'package:teste2/RedeemCellPhone/passwordRecharge.dart';
 import 'package:teste2/RedeemCellPhone/rechargeSuccess.dart';
+import 'package:teste2/RedeemFailureCellPhone/redeem_failure_cell_phone.dart';
 import 'package:teste2/redeemiFoodSucess/redeemReward.dart';
 import 'package:teste2/RedeemCellPhone/redeemcellphone.dart';
 import 'package:get/get.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RateApp(title: 'Avalie o Mangos'),
+      home:FailureCellPhone(title: 'Resgatar'),
     );
   }
 }

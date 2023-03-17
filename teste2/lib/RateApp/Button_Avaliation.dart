@@ -19,7 +19,7 @@ class BtnAvaliation extends StatelessWidget {
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: indice == 0
-                    ? Color.fromRGBO(252, 221, 217, 1)
+                    ? const Color.fromRGBO(252, 221, 217, 1)
                     : Colors.white),
             child: Stack(
               alignment: Alignment.center,
@@ -38,7 +38,7 @@ class BtnAvaliation extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 32,
         ),
         InkWell(
@@ -47,7 +47,7 @@ class BtnAvaliation extends StatelessWidget {
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: indice == 1
-                    ? Color.fromRGBO(209, 242, 220, 1)
+                    ? const Color.fromRGBO(209, 242, 220, 1)
                     : Colors.white),
             child: Stack(
               alignment: Alignment.center,
