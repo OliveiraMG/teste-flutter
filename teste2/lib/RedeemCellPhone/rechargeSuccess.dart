@@ -58,15 +58,14 @@ class RechargeSuccess extends StatelessWidget {
             ),
             RichText(
               text: const TextSpan(
-                text:
-                    'O valor será transferido para a operadora do número informado em até ',
+                text: 'Várias chances de ganhar ',
                 style: TextStyle(
                   color: Color.fromRGBO(57, 57, 57, 1),
                   fontSize: 16,
                 ),
                 children: <TextSpan>[
                   TextSpan(
-                    text: '7 dias úteis.',
+                    text: 'prêmios incríveis ',
                     style: TextStyle(
                       color: Color.fromRGBO(57, 57, 57, 1),
                       fontWeight: FontWeight.bold,
@@ -138,8 +137,7 @@ class RechargeSuccess extends StatelessWidget {
                           const SizedBox(height: 16),
                           RichText(
                             text: const TextSpan(
-                              text:
-                                  'Para mais informações consulte seu e-mail ou entre em contato com ',
+                              text: 'Para mais informações consulte seu e-mail ou entre em contato com ',
                               style: TextStyle(
                                 color: Color.fromRGBO(57, 57, 57, 1),
                                 fontSize: 16,
@@ -170,8 +168,7 @@ class RechargeSuccess extends StatelessWidget {
                               onPressed: () => Get.back(),
                               child: const Text(
                                 'Entrar em contato',
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.white),
+                                style: TextStyle(fontSize: 16, color: Colors.white),
                               ),
                             ),
                           ),
